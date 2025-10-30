@@ -2,13 +2,14 @@ package org.example.lesson2
 
 fun main() {
 
-    val buff = 1.2f
+    val buffPercentage = 20
+    val buffMultiplierOre = 1 + buffPercentage * 0.01
 
     val crystalOreMined = 7
     val ironOreMined = 11
 
-    val additionalCrystalOre = (crystalOreMined * buff - crystalOreMined).toInt()
-    val additionalIronOre = (ironOreMined * buff - ironOreMined).toInt()
+    val additionalCrystalOre = (crystalOreMined * buffMultiplierOre - crystalOreMined).toInt()
+    val additionalIronOre = (ironOreMined * buffMultiplierOre - ironOreMined).toInt()
 
     println(additionalCrystalOre)
     println(additionalIronOre)
