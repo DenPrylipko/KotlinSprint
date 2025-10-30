@@ -5,7 +5,8 @@ import kotlin.math.pow
 fun main() {
 
     val initialPrincipalBalance = 70_000
-    val interestRate = 0.167
+    val interestPercentage = 16.7
+    val interestRate = interestPercentage * 0.01
     val numberOfTimePeriodElapsed = 20
     val numbersOfTimesInterestPerTimePeriod = 1
 
