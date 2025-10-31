@@ -4,9 +4,11 @@ fun main() {
 
     val string = "D2-D4;0"
 
-    val from = string.take(2)
-    val to = string.drop(3).take(2)
-    val step = string[6]
+    val parts = string.split("-", ";")
+
+    val from = parts[0]
+    val to = parts[1]
+    val step = parts[2]
 
     println(from)
     println(to)
