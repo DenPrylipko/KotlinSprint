@@ -1,13 +1,11 @@
 package org.example.lesson4
 
 fun main() {
-    var handsAndPress: Boolean
-    var legsAndBack: Boolean
+    val dayOfTraining = 5
+    val isEven = dayOfTraining % 2 == 0
 
-    val dayOfTraining = 6
-
-    handsAndPress = dayOfTraining % 2 == 1
-    legsAndBack = !handsAndPress
+    val handsAndPress = !isEven
+    val legsAndBack = isEven
 
     println("""
         Упражнения для рук: $handsAndPress
