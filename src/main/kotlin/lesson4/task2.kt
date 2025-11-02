@@ -7,7 +7,7 @@ fun main() {
     val objectWeight2 = 50
     val objectVolume2 = 100
 
-    println("Груз с весом $objectWeight1 кг и объемом $objectVolume1 л соответствует категории 'Average':" +
+    println("Груз с весом $objectWeight1 кг и объемом $objectVolume1 л соответствует категории 'Average': " +
             "${(objectWeight1 > MIN_AVERAGE_WEIGHT) && (objectWeight1 <= MAX_AVERAGE_WEIGHT) && (objectVolume1 < MAX_AVERAGE_VOLUME)}")
     println("Груз с весом $objectWeight2 кг и объемом $objectVolume2 л соответствует категории 'Average': " +
             "${(objectWeight2 > MIN_AVERAGE_WEIGHT) && (objectWeight2 <= MAX_AVERAGE_WEIGHT) && (objectVolume2 < MAX_AVERAGE_VOLUME)}")
