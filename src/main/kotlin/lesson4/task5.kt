@@ -8,14 +8,15 @@ fun main() {
         3. current provisions
         4. is the weather favorable?
     """.trimIndent())
-    val shipDamaged: Boolean = readln().toBoolean()
+    val isDamaged: Boolean = readln().toBoolean()
     val currentCrew: Int = readln().toInt()
     val currentProvisions: Int = readln().toInt()
-    val favorableWeather: Boolean = readln().toBoolean()
+    val isFavorableWeather: Boolean = readln().toBoolean()
 
     val shipIsReadyForALongVoyage =
-        ((!shipDamaged) && (currentCrew in MIN_CREW..RECOMMENDED_CREW) && (currentProvisions > MIN_NUMBER_OF_PROVISIONS) && (favorableWeather))
-                || ((shipDamaged) && (currentCrew == RECOMMENDED_CREW) && (currentProvisions > MIN_NUMBER_OF_PROVISIONS) && (favorableWeather))
+        !isDamaged && currentCrew in MIN_CREW..RECOMMENDED_CREW && currentProvisions >= MIN_NUMBER_OF_PROVISIONS
+                || isDamaged &&
+                currentCrew == RECOMMENDED_CREW && currentProvisions >= MIN_NUMBER_OF_PROVISIONS && isFavorableWeather
 
     println("Ship is ready for a long voyage: $shipIsReadyForALongVoyage")
 }
