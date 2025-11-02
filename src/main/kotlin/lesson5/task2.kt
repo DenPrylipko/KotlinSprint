@@ -3,7 +3,6 @@ package org.example.lesson5
 import java.time.LocalDate
 
 fun main() {
-
     println("Enter your birthday year")
     val userBirthdayYear = readln().toInt()
     val thisYear = LocalDate.now().year
@@ -18,6 +17,5 @@ fun main() {
     }
 
     println(resultText)
-
 }
 const val AGE_OF_MAJORITY = 18
