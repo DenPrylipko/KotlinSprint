@@ -14,9 +14,10 @@ fun main() {
     val isFavorableWeather: Boolean = readln().toBoolean()
 
     val shipIsReadyForALongVoyage =
-        !isDamaged && currentCrew in MIN_CREW..RECOMMENDED_CREW && currentProvisions >= MIN_NUMBER_OF_PROVISIONS
-                || isDamaged &&
-                currentCrew == RECOMMENDED_CREW && currentProvisions >= MIN_NUMBER_OF_PROVISIONS && isFavorableWeather
+        !isDamaged && currentCrew in MIN_CREW..RECOMMENDED_CREW &&
+                currentProvisions > MIN_NUMBER_OF_PROVISIONS ||
+                isDamaged && currentCrew == RECOMMENDED_CREW &&
+                currentProvisions >= MIN_NUMBER_OF_PROVISIONS && isFavorableWeather
 
     println("Ship is ready for a long voyage: $shipIsReadyForALongVoyage")
 }
