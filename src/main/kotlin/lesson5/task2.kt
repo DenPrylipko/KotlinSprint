@@ -18,4 +18,5 @@ fun main() {
 
     println(resultText)
 }
+
 const val AGE_OF_MAJORITY = 18
