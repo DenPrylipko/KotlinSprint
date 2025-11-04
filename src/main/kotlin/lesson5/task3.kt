@@ -25,14 +25,12 @@ fun main() {
     println("Enter your second number...")
     val secondUserNumber = readln().toInt()
 
-    if ((firstUserNumber == firstNumber || firstUserNumber == secondNumber) &&
-        (secondUserNumber == firstNumber || secondUserNumber == secondNumber)
+    if ((firstUserNumber == firstNumber && secondUserNumber == secondNumber) ||
+        (firstUserNumber == secondNumber && secondUserNumber == firstNumber)
     ) {
         println(twoNumbersGuessedText)
-    } else if ((firstUserNumber == firstNumber || firstUserNumber == secondNumber)
-    ) {
-        println(oneNumberGuessedText)
-    } else if ((secondUserNumber == firstNumber || secondUserNumber == secondNumber)
+    } else if ((firstUserNumber == firstNumber || secondUserNumber == firstNumber) ||
+        (firstUserNumber == secondNumber || secondUserNumber == secondNumber)
     ) {
         println(oneNumberGuessedText)
     } else {
