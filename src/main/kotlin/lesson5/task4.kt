@@ -13,30 +13,28 @@ fun main() {
         [вздыхает ещё глубже...] Да, вперед, пожалуйста, вводите свои данные...
     """.trimIndent()
     )
-    var userInput = readln()
+    val userName = readln()
 
-    if (userInput != registeredUserName) {
+    if (userName != registeredUserName) {
         println(
             """
-            вы, но это имя не совпадает ни с одним из моей базы даных...
+            Увы, но это имя не совпадает ни с одним из моей базы даных...
             Предлагаю вам пройти регистрацию на борте
-        """.trimMargin()
+        """.trimIndent()
         )
         return
-    } else {
-        println("Введите ваш пароль...")
-        userInput = readln()
-        if (userInput == registeredUserPassword) {
-            println(
-                """
+    }
+
+    println("Введите ваш пароль...")
+    val userPassword = readln()
+    if (userPassword == registeredUserPassword) {
+        println(
+            """
                 [вздыхает...] Ваши данные проверены, и о, чудо, они верны...
                 Пользователь "Zaphod", вам разрешено входить на борт корабля "Heart of Gold".
                 Хотя мне всё равно... Ну вперед, войдите... Если вам так уж надо, в конце концов...
                 [меланхолический вздох...] Надеюсь, вам понравится пребывание здесь больше, чем мне.
             """.trimIndent()
-            )
-        } else println("Пароль не верный, начните авторизацию с начала")
-    }
-
-
+        )
+    } else println("Пароль не верный, начните авторизацию с начала")
 }
